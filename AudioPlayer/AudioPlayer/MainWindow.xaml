@@ -6,35 +6,54 @@
         xmlns:local="clr-namespace:AudioPlayer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#333">
         <StackPanel>
-            <!-- Playlist controls -->
-            <Button Content="Add Track" Click="AddTrack_Click" />
-            <Button Content="Delete Track" Click="DeleteTrack_Click" />
-            <Button Content="Save Playlist" Click="SavePlaylist_Click" />
-            <Button Content="Load Playlist" Click="LoadPlaylist_Click" />
+            <!-- Control Panel -->
+            <Grid Height="240" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
-            <!-- Playback controls -->
-            <Button Content="Play" Click="Play_Click" />
-            <Button Content="Pause" Click="Pause_Click" />
-            <Button Content="Stop" Click="Stop_Click" />
-            <Button Content="Previous" Click="Previous_Click" />
-            <Button Content="Next" Click="Next_Click" />
+                <!-- Top Row Buttons -->
+                <Button Content="Add Track" Click="AddTrack_Click" Width="100" Height="50" Margin="5" Background="#444" Foreground="White"/>
+                <Button Grid.Column="1" Content="Delete Track" Click="DeleteTrack_Click" Width="100" Height="50" Margin="5" Background="#444" Foreground="White"/>
+                <Button Grid.Column="2" Content="Save Playlist" Click="SavePlaylist_Click" Width="100" Height="50" Margin="5" Background="#444" Foreground="White"/>
+                <Button Grid.Column="3" Content="Load Playlist" Click="LoadPlaylist_Click" Width="100" Height="50" Margin="5" Background="#444" Foreground="White"/>
 
-            <!-- Track Info -->
-            <TextBlock x:Name="TrackInfo" Text="Track Info" />
+                <!-- Bottom Row Buttons -->
+                <Button Grid.Row="1" Content="Play" Click="Play_Click" Width="100" Height="50" Margin="5" Background="#444" Foreground="White"/>
+                <Button Grid.Row="1" Grid.Column="1" Content="Pause" Click="Pause_Click" Width="100" Height="50" Margin="5" Background="#444" Foreground="White"/>
+                <Button Grid.Row="1" Grid.Column="2" Content="Stop" Click="Stop_Click" Width="100" Height="50" Margin="5" Background="#444" Foreground="White"/>
+                <Button Grid.Row="1" Grid.Column="3" Content="Previous" Click="Previous_Click" Width="100" Height="50" Margin="5" Background="#444" Foreground="White"/>
+                <Button Grid.Row="1" Grid.Column="4" Content="Next" Click="Next_Click" Width="100" Height="50" Margin="5" Background="#444" Foreground="White"/>
+            </Grid>
 
-            <!-- Progress Bar -->
-            <ProgressBar x:Name="ProgressBar" Minimum="0" Maximum="100" Height="20" />
-            <TextBlock x:Name="CurrentTime" Text="00:00" />
-            <TextBlock x:Name="TotalTime" Text="00:00" />
+            <!-- Track Info and Progress -->
+            <TextBlock x:Name="TrackInfo" Text="Track Info" FontSize="16" Margin="5" Foreground="White"/>
+            <ProgressBar x:Name="ProgressBar" Minimum="0" Maximum="100" Height="20" Margin="5" Foreground="#1DB954" Background="#444"/>
+            <StackPanel Orientation="Horizontal" Margin="5,0,5,10">
+                <TextBlock x:Name="CurrentTime" Text="00:00" Width="50" TextAlignment="Center" Foreground="White"/>
+                <TextBlock Text="/" Width="10" TextAlignment="Center" Foreground="White"/>
+                <TextBlock x:Name="TotalTime" Text="00:00" Width="50" TextAlignment="Center" Foreground="White"/>
+            </StackPanel>
 
-            <!-- Volume control -->
-            <Slider x:Name="VolumeSlider" Minimum="0" Maximum="1" Value="0.5" ValueChanged="VolumeSlider_ValueChanged" />
-            <TextBlock Text="Volume" />
+            <!-- Volume Control -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                <TextBlock Text="Volume" VerticalAlignment="Center" Margin="0,0,5,0" Foreground="White"/>
+                <Slider x:Name="VolumeSlider" Minimum="0" Maximum="1" Value="0.5" Width="200" ValueChanged="VolumeSlider_ValueChanged" Foreground="#1DB954" Background="#444"/>
+            </StackPanel>
+
+            <!-- Playlist -->
+            <ListBox x:Name="Playlist" VerticalAlignment="Bottom" Height="150" Margin="0,0,0,10" Background="#444" Foreground="White"/>
         </StackPanel>
-
-        <!-- Playlist display -->
-        <ListBox x:Name="Playlist" HorizontalAlignment="Right" Width="300" Height="300" />
     </Grid>
+
 </Window>
