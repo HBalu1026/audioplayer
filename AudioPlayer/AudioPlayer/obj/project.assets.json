@@ -487,19 +487,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hernadi.balazs\\.nuget\\packages\\": {}
+    "C:\\Users\\GIGABYTE\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hernadi.balazs\\source\\repos\\AudioPlayer\\AudioPlayer\\AudioPlayer.csproj",
+      "projectUniqueName": "H:\\audioplayer-main\\audioplayer-main\\AudioPlayer\\AudioPlayer\\AudioPlayer.csproj",
       "projectName": "AudioPlayer",
-      "projectPath": "C:\\Users\\hernadi.balazs\\source\\repos\\AudioPlayer\\AudioPlayer\\AudioPlayer.csproj",
-      "packagesPath": "C:\\Users\\hernadi.balazs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hernadi.balazs\\source\\repos\\AudioPlayer\\AudioPlayer\\obj\\",
+      "projectPath": "H:\\audioplayer-main\\audioplayer-main\\AudioPlayer\\AudioPlayer\\AudioPlayer.csproj",
+      "packagesPath": "C:\\Users\\GIGABYTE\\.nuget\\packages\\",
+      "outputPath": "H:\\audioplayer-main\\audioplayer-main\\AudioPlayer\\AudioPlayer\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\hernadi.balazs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GIGABYTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -519,11 +524,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -554,7 +554,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
